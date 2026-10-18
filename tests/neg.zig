@@ -1,17 +1,15 @@
 const std = @import("std");
 const tern = @import("ternlib");
+const Tryte = tern.Tryte;
 
-
-
-const TernPlanes = tern.TernPlanes(u8);
 
 
 test "neg inversion and involution" {
-    const original = TernPlanes{
+    const original: Tryte = .{
         .p = 0b1001,
         .n = 0b0110,
     };
-    const expected_negated = TernPlanes{
+    const expected_negated: Tryte = .{
         .p = 0b0110,
         .n = 0b1001,
     };
