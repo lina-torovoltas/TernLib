@@ -5,7 +5,7 @@ const std = @import("std");
 // Shifts
 
 
-/// shifts left, filling with 0
+// shifts left, filling with 0
 pub fn shl(num_planes: anytype, shift: usize) @TypeOf(num_planes) {
     const PlaneInt = @TypeOf(num_planes.p);
 
@@ -17,7 +17,7 @@ pub fn shl(num_planes: anytype, shift: usize) @TypeOf(num_planes) {
     return result;
 }
 
-/// shifts right, filling with 0
+// shifts right, filling with 0
 pub fn shr(num_planes: anytype, shift: usize) @TypeOf(num_planes) {
     const PlaneInt = @TypeOf(num_planes.p);
 
