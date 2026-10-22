@@ -45,7 +45,7 @@ pub fn dec(num_planes: anytype) @TypeOf(num_planes) {
 // - > 0
 // 0 > 0
 // + > +
-pub fn keepPos(num_planes: anytype) @TypeOf(num_planes) {
+pub fn clampPos(num_planes: anytype) @TypeOf(num_planes) {
     var result: @TypeOf(num_planes) = undefined;
 
     result.p = num_planes.p;
@@ -57,7 +57,7 @@ pub fn keepPos(num_planes: anytype) @TypeOf(num_planes) {
 // - > -
 // 0 > 0
 // + > 0
-pub fn keepNeg(num_planes: anytype) @TypeOf(num_planes) {
+pub fn clampNeg(num_planes: anytype) @TypeOf(num_planes) {
     var result: @TypeOf(num_planes) = undefined;
 
     result.p = 0;

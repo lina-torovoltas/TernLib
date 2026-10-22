@@ -18,7 +18,7 @@ pub fn isNeg(num_planes: anytype) @TypeOf(num_planes) {
 // - > -
 // 0 > +
 // + > -
-pub fn isZero(num_planes: anytype) @TypeOf(num_planes) {
+pub fn isUnk(num_planes: anytype) @TypeOf(num_planes) {
     var result: @TypeOf(num_planes) = undefined;
     const nonzero = num_planes.p | num_planes.n;
 
