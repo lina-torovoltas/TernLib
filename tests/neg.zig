@@ -1,6 +1,7 @@
 const std = @import("std");
 const tern = @import("ternlib");
-const Tryte = tern.Tryte;
+const Tryte = tern.types.Tryte;
+const neg = tern.monadic.neg;
 
 
 
@@ -14,9 +15,9 @@ test "neg inversion and involution" {
         .n = 0b1001,
     };
 
-    const negated = tern.neg(original);
+    const negated = neg(original);
     try std.testing.expectEqual(expected_negated, negated);
 
-    const double_negated = tern.neg(negated);
+    const double_negated = neg(negated);
     try std.testing.expectEqual(original, double_negated);
 }

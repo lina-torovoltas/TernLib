@@ -8,7 +8,7 @@ pub fn build(b: *std.Build) !void {
     const io = b.graph.io;
 
     const ternlib_module = b.addModule("ternlib", .{
-        .root_source_file = b.path("src/ternlib.zig"),
+        .root_source_file = b.path("src/root.zig"),
         .target = target,
         .optimize = optimize,
     });
