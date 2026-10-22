@@ -1,6 +1,6 @@
 .{
     .name = .ternlib,
-    .version = "0.3.0",
+    .version = "0.3.5",
     .fingerprint = 0xd3d764ee39274281,
     .minimum_zig_version = "0.16.0",
     .paths = .{
