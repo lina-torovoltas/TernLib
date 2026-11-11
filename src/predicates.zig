@@ -39,3 +39,19 @@ pub fn isPos(num_planes: anytype) @TypeOf(num_planes) {
 
     return result;
 }
+
+// if both plane bits are set, then - else +
+// p n > result
+// 0 0 > +
+// 1 0 > +
+// 0 1 > +
+// 1 1 > -
+pub fn isValid(num_planes: anytype) @TypeOf(num_planes) {
+    var result: @TypeOf(num_planes) = undefined;
+    const invalid = num_planes.p & num_planes.n;
+
+    result.p = ~invalid;
+    result.n = invalid;
+
+    return result;
+}
