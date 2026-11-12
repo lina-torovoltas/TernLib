@@ -15,7 +15,7 @@ pub fn TernPlanes(comptime PlaneInt: type) type {
 }
 
 
-// standard widths 3^n with naming aliases
+// standard widths 3^n 
 
 pub const t1 = TernPlanes(u1);
 pub const t3 = TernPlanes(u3);
@@ -24,12 +24,23 @@ pub const t27 = TernPlanes(u27);
 pub const t81 = TernPlanes(u81);
 pub const t243 = TernPlanes(u243);
 
+// naming aliases
+
 pub const Trit = t1;
 pub const Triad = t3;
 pub const Tryte = t9;
 pub const Verbum = t27;
-pub const TriplexVerbum = t81;
-pub const NovemplexVerbum = t243;
+pub const TriVerbum  = t81;
+pub const NonaVerbum = t243;
+
+// shortened naming aliases
+
+pub const T = t1;
+pub const TD = t3;
+pub const TR = t9;
+pub const V = t27;
+pub const TV  = t81;
+pub const NV = t243;
 
 
 // non-standard even widths
@@ -41,3 +52,23 @@ pub const t24 = TernPlanes(u24);
 pub const t48 = TernPlanes(u48);
 pub const t96 = TernPlanes(u96);
 pub const t192 = TernPlanes(u192);
+
+// naming aliases
+
+pub const Tweet = t2;
+pub const SetunTryte = t6;
+pub const Doze = t12;
+pub const DoubleDoze = t24;
+pub const QuadDoze = t48;
+pub const OctaDoze = t96;
+pub const HexDoze = t192;
+
+// shortened naming aliases
+
+pub const TW = t2;
+pub const ST = t6;
+pub const D = t12;
+pub const DD = t24;
+pub const QD = t48;
+pub const OD = t96;
+pub const HD = t192;
