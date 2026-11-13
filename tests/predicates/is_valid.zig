@@ -5,14 +5,10 @@ const isValid = tern.predicates.isValid;
 
 
 
-test "isValid valid value and zero" {
+test "valid pattern" {
     const valid: Tryte = .{
-        .p = 0b000000101,
-        .n = 0b000001010,
-    };
-    const zero: Tryte = .{
-        .p = 0,
-        .n = 0,
+        .p = 0b010101010,
+        .n = 0b101010101,
     };
     const expected: Tryte = .{
         .p = 0b111111111,
@@ -20,25 +16,23 @@ test "isValid valid value and zero" {
     };
 
     try std.testing.expectEqual(expected, isValid(valid));
-    try std.testing.expectEqual(expected, isValid(zero));
 }
 
-
-test "isValid overlapping trits" {
+test "overlapping pattern" {
     const broken: Tryte = .{
-        .p = 0b000100101,
-        .n = 0b000010100,
+        .p = 0b101010101,
+        .n = 0b101010101,
     };
     const expected: Tryte = .{
-        .p = 0b111111011,
-        .n = 0b000000100,
+        .p = 0b010101010,
+        .n = 0b101010101,
     };
 
     try std.testing.expectEqual(expected, isValid(broken));
 }
 
 
-test "isValid all trits overlapping" {
+test "all overlapping" {
     const broken: Tryte = .{
         .p = 0b111111111,
         .n = 0b111111111,
@@ -49,4 +43,17 @@ test "isValid all trits overlapping" {
     };
 
     try std.testing.expectEqual(expected, isValid(broken));
+}
+
+test "all zero" {
+    const all_zero: Tryte = .{
+        .p = 0,
+        .n = 0,
+    };
+    const expected: Tryte = .{
+        .p = 0b111111111,
+        .n = 0b000000000,
+    };
+
+    try std.testing.expectEqual(expected, isValid(all_zero));
 }

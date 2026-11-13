@@ -6,7 +6,7 @@ const decodeTrits = tern.format.decodeTrits;
 
 
 
-test "encodeTrits and decodeTrits output format" {
+test "output format" {
     const original: Tryte = .{
         .p = 0b100100100,
         .n = 0b001001001,
@@ -24,7 +24,7 @@ test "encodeTrits and decodeTrits output format" {
 }
 
 
-test "decodeTrits zero padding and errors" {
+test "zero padding and errors" {
     const planes: Tryte = .{
         .p = 0,
         .n = 0,

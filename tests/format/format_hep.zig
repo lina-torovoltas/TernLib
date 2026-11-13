@@ -6,7 +6,7 @@ const decodeHEP = tern.format.decodeHEP;
 
 
 
-test "encodeTrits and decodeTrits output format" {
+test "output format" {
     const original: Tryte = .{
         .p = 0b100100100,
         .n = 0b001001001,
@@ -21,7 +21,7 @@ test "encodeTrits and decodeTrits output format" {
 }
 
 
-test "encodeHEP and decodeHEP min and max" {
+test "min and max" {
     const max: Tryte = .{
         .p = 0b111111111,
         .n = 0b000000000,
@@ -40,7 +40,7 @@ test "encodeHEP and decodeHEP min and max" {
     try std.testing.expectEqual(min, try decodeHEP(min, "mmm"));
 }
 
-test "decodeHEP zero padding and errors" {
+test "zero padding and errors" {
     const planes: Tryte = .{
         .p = 0,
         .n = 0,

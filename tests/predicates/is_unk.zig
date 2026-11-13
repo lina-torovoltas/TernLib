@@ -5,25 +5,41 @@ const isUnk = tern.predicates.isUnk;
 
 
 
-test "isUnk valid value and zero" {
-    const valid: Tryte = .{
-        .p = 0b000000101,
-        .n = 0b000001010,
+test "all negative" {
+    const all_neg: Tryte = .{
+        .p = 0,
+        .n = 0b111111111,
     };
-    const zero: Tryte = .{
+    const expected: Tryte = .{
+        .p = 0,
+        .n = 0b111111111,
+    };
+
+    try std.testing.expectEqual(expected, isUnk(all_neg));
+}
+
+test "all zero" {
+    const all_zero: Tryte = .{
         .p = 0,
         .n = 0,
     };
-
-    const expected_valid: Tryte = .{
-        .p = 0b111110000,
-        .n = 0b000001111,
-    };
-    const expected_zero: Tryte = .{
+    const expected: Tryte = .{
         .p = 0b111111111,
-        .n = 0b000000000,
+        .n = 0,
     };
 
-    try std.testing.expectEqual(expected_valid, isUnk(valid));
-    try std.testing.expectEqual(expected_zero, isUnk(zero));
+    try std.testing.expectEqual(expected, isUnk(all_zero));
+}
+
+test "all positive" {
+    const all_pos: Tryte = .{
+        .p = 0b111111111,
+        .n = 0,
+    };
+    const expected: Tryte = .{
+        .p = 0,
+        .n = 0b111111111,
+    };
+
+    try std.testing.expectEqual(expected, isUnk(all_pos));
 }

@@ -5,25 +5,41 @@ const isNeg = tern.predicates.isNeg;
 
 
 
-test "isNeg valid value and zero" {
-    const valid: Tryte = .{
-        .p = 0b000000101,
-        .n = 0b000001010,
-    };
-    const zero: Tryte = .{
+test "all negative" {
+    const all_neg: Tryte = .{
         .p = 0,
+        .n = 0b111111111,
+    };
+    const expected: Tryte = .{
+        .p = 0b111111111,
         .n = 0,
     };
 
-    const expected_valid: Tryte = .{
-        .p = 0b000001010,
-        .n = 0b111110101,
+    try std.testing.expectEqual(expected, isNeg(all_neg));
+}
+
+test "all zero" {
+    const all_zero: Tryte = .{
+        .p = 0,
+        .n = 0,
     };
-    const expected_zero: Tryte = .{
+    const expected: Tryte = .{
         .p = 0,
         .n = 0b111111111,
     };
 
-    try std.testing.expectEqual(expected_valid, isNeg(valid));
-    try std.testing.expectEqual(expected_zero, isNeg(zero));
+    try std.testing.expectEqual(expected, isNeg(all_zero));
+}
+
+test "all positive" {
+    const all_pos: Tryte = .{
+        .p = 0b111111111,
+        .n = 0,
+    };
+    const expected: Tryte = .{
+        .p = 0,
+        .n = 0b111111111,
+    };
+
+    try std.testing.expectEqual(expected, isNeg(all_pos));
 }
