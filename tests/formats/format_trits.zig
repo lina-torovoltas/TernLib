@@ -1,8 +1,8 @@
 const std = @import("std");
 const tern = @import("ternlib");
 const Tryte = tern.types.Tryte;
-const encodeTrits = tern.format.encodeTrits;
-const decodeTrits = tern.format.decodeTrits;
+const encodeTrits = tern.formats.encodeTrits;
+const decodeTrits = tern.formats.decodeTrits;
 
 
 

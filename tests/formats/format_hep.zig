@@ -1,8 +1,8 @@
 const std = @import("std");
 const tern = @import("ternlib");
 const Tryte = tern.types.Tryte;
-const encodeHEP = tern.format.encodeHEP;
-const decodeHEP = tern.format.decodeHEP;
+const encodeHEP = tern.formats.encodeHEP;
+const decodeHEP = tern.formats.decodeHEP;
 
 
 

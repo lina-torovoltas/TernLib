@@ -206,7 +206,7 @@ pub fn xorJ(num1: anytype, num2: @TypeOf(num1)) @TypeOf(num1) {
 // -   - - 0
 // 0   - 0 +
 // +   0 + +
-pub fn any(num1: anytype, num2: @TypeOf(num1)) @TypeOf(num1) {
+pub fn anyJ(num1: anytype, num2: @TypeOf(num1)) @TypeOf(num1) {
     var result: @TypeOf(num1) = undefined;
 
     result.p = (num1.p & num2.p) | (num1.p & ~num2.n) | (num2.p & ~num1.n);

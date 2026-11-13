@@ -15,4 +15,17 @@ test {
     _ = @import("shifts/shr.zig");
     _ = @import("shifts/rotl.zig");
     _ = @import("shifts/rotr.zig");
+    _ = @import("dyadic/add_mod.zig");
+    _ = @import("dyadic/mul_mod.zig");
+    _ = @import("dyadic/sub_mod.zig");
+    _ = @import("dyadic/consensus.zig");
+    _ = @import("dyadic/t_max.zig");
+    _ = @import("dyadic/t_min.zig");
+    _ = @import("dyadic/imp_k.zig");
+    _ = @import("dyadic/imp_l.zig");
+    _ = @import("dyadic/eqv_k.zig");
+    _ = @import("dyadic/eqv_l.zig");
+    _ = @import("dyadic/t_webb.zig");
+    _ = @import("dyadic/xor_j.zig");
+    _ = @import("dyadic/any_j.zig");
 }
