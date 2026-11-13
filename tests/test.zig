@@ -11,4 +11,8 @@ test {
     _ = @import("predicates/is_neg.zig");
     _ = @import("predicates/is_unk.zig");
     _ = @import("predicates/is_pos.zig");
+    _ = @import("shift/shl.zig");
+    _ = @import("shift/shr.zig");
+    _ = @import("shift/rotl.zig");
+    _ = @import("shift/rotr.zig");
 }
