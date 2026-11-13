@@ -1,4 +1,5 @@
 test {
+    _ = @import("types/types.zig");
     _ = @import("formats/format_hep.zig");
     _ = @import("formats/format_trits.zig");
     _ = @import("monadic/neg.zig");
