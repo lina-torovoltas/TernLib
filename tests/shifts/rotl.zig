@@ -1,7 +1,7 @@
 const std = @import("std");
 const tern = @import("ternlib");
 const Tryte = tern.types.Tryte;
-const rotl = tern.shift.rotl;
+const rotl = tern.shifts.rotl;
 
 
 

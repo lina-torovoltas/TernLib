@@ -1,6 +1,6 @@
 test {
-    _ = @import("format/format_hep.zig");
-    _ = @import("format/format_trits.zig");
+    _ = @import("formats/format_hep.zig");
+    _ = @import("formats/format_trits.zig");
     _ = @import("monadic/neg.zig");
     _ = @import("monadic/dec.zig");
     _ = @import("monadic/inc.zig");
@@ -11,8 +11,8 @@ test {
     _ = @import("predicates/is_neg.zig");
     _ = @import("predicates/is_unk.zig");
     _ = @import("predicates/is_pos.zig");
-    _ = @import("shift/shl.zig");
-    _ = @import("shift/shr.zig");
-    _ = @import("shift/rotl.zig");
-    _ = @import("shift/rotr.zig");
+    _ = @import("shifts/shl.zig");
+    _ = @import("shifts/shr.zig");
+    _ = @import("shifts/rotl.zig");
+    _ = @import("shifts/rotr.zig");
 }
