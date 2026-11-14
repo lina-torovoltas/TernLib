@@ -1,9 +1,15 @@
-# TernLib
-![Release](https://img.shields.io/badge/release-v0.4.5-0078D4)
-![Language](https://img.shields.io/badge/language%20-%20Zig-orange)
-![License](https://img.shields.io/github/license/lina-torovoltas/TernLib)
-![GitHub last commit](https://img.shields.io/github/last-commit/lina-torovoltas/TernLib)</br>
+<p align="center">
+  <img src="TernLib.png" width="480">
+</p>
 
+<h1 align="center">TernLib</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/release-v0.4.5-0078D4">
+  <img src="https://img.shields.io/badge/language-Zig-orange">
+  <img src="https://img.shields.io/github/license/lina-torovoltas/TernLib">
+  <img src="https://img.shields.io/github/last-commit/lina-torovoltas/TernLib">
+</p>
 
 ### Was ist das???
 
