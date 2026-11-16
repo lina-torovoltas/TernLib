@@ -4,3 +4,4 @@ pub const predicates = @import("predicates.zig");
 pub const dyadic = @import("dyadic.zig");
 pub const shifts = @import("shifts.zig");
 pub const formats = @import("formats.zig");
+pub const arith = @import("arith.zig");

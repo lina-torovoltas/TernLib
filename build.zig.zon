@@ -10,5 +10,7 @@
         "tests",
         "LICENSE",
         "README.md",
+        "docs",
+        "examples",
     },
 }

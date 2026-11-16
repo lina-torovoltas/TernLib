@@ -29,4 +29,5 @@ test {
     _ = @import("dyadic/t_webb.zig");
     _ = @import("dyadic/xor_j.zig");
     _ = @import("dyadic/any_j.zig");
+    _ = @import("arith/add_half.zig");
 }
